@@ -100,4 +100,5 @@ public abstract class BasePage {
         }
     }
 
+    protected Actions action = new Actions(Driver.getDriver());
 }
