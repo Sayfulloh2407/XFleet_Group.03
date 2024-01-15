@@ -37,6 +37,15 @@ public abstract class BasePage {
 
     @FindBy(linkText = "My User")
     public WebElement myUser;
+    @FindBy(linkText = "Learn how to use this space")
+    public WebElement pinBar;
+
+    @FindBy(xpath = "//img[@src='/bundles/oronavigation/images/pinbar-location.jpg']")
+    public WebElement pinBarImage;
+
+    @FindBy(xpath ="//button[@title='Pin/unpin the page']")
+    public WebElement pinIcon;
+
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -100,4 +109,5 @@ public abstract class BasePage {
         }
     }
 
+    protected Actions action = new Actions(Driver.getDriver());
 }
